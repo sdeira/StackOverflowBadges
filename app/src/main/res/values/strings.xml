@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">StackOverflow Badges</string>
+
+    //stack overflow api
+    <string name="client_id">19414</string>
+    <string name="client_secret">lL1jf*2t22nzgMfVy3Zu1w((</string>
+    <string name="redirect_uri">http://www.stackoverflowbadges.com/success</string>
+    <string name="scope">no_expiry</string>
+    <string name="key">w52jhZVRBAv1ImHCSORkGA((</string>
 </resources>
