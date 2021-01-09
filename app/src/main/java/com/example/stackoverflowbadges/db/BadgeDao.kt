@@ -14,4 +14,7 @@ interface BadgeDao {
 
     @Query("SELECT * FROM badges ORDER BY indexInResponse ASC")
     fun badges(): PagingSource<Int, Badge>
+
+    @Query("DELETE FROM badges")
+    suspend fun clearBadges()
 }
