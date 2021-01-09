@@ -2,6 +2,15 @@
     <string name="app_name">StackOverflow Badges</string>
     <string name="retry">Retry</string>
     <string name="login_successfully">Login Successfully!</string>
+    <string name="empty_state">No Items matching this filter</string>
+
+    //Filters
+    <string name="all">All</string>
+    <string name="gold">Gold</string>
+    <string name="silver">Silver</string>
+    <string name="bronze">Bronze</string>
+    <string name="asc_order">Asc</string>
+    <string name="desc_order">Desc</string>
 
     //stack overflow api
     <string name="client_id">19414</string>
