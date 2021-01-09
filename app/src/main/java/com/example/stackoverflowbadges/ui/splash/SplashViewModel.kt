@@ -6,12 +6,12 @@ import androidx.lifecycle.ViewModel
 import com.example.stackoverflowbadges.db.StackOverflowDataBase
 
 class SplashViewModel @ViewModelInject constructor(
-    private val redditDataBase: StackOverflowDataBase
+    private val stackOverflowDataBase: StackOverflowDataBase
 ) : ViewModel() {
     val uiState: MutableLiveData<SplashUIState> = MutableLiveData()
 
     suspend fun checkUserToken() {
-        val accessTokenSaved = redditDataBase.accessTokenDao().token(1)
+        val accessTokenSaved = stackOverflowDataBase.accessTokenDao().token(1)
         if (accessTokenSaved != null) {
             uiState.value = SplashUIState.Success
         } else {

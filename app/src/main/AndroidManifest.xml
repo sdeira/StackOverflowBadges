@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest package="com.example.stackoverflowbadges"
     xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".MainApplication"
@@ -23,6 +24,20 @@
         </activity>
 
         <activity android:name=".MainActivity"/>
+
+        <activity android:name=".ui.deeplink.DeepLinkActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="http"
+                    android:host="www.stackoverflowbadges.com"
+                    android:path="/success" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

@@ -30,6 +30,10 @@ android {
         targetCompatibility 1.8
     }
 
+    buildFeatures {
+        dataBinding = true
+    }
+
     kotlinOptions {
         jvmTarget = "1.8"
         freeCompilerArgs += ["-Xopt-in=kotlin.RequiresOptIn"]

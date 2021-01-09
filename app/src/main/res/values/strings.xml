@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">StackOverflow Badges</string>
+    <string name="retry">Retry</string>
+    <string name="login_successfully">Login Successfully!</string>
 
     //stack overflow api
     <string name="client_id">19414</string>
