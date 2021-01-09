@@ -1,4 +1,4 @@
-package com.example.stackoverflowbadges.ui.main
+package com.example.stackoverflowbadges.ui.badges
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -7,11 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.stackoverflowbadges.R
+import com.example.stackoverflowbadges.ui.main.MainViewModel
 
-class MainFragment : Fragment() {
+class BadgesFragment : Fragment() {
 
     companion object {
-        fun newInstance() = MainFragment()
+        fun newInstance() =
+            BadgesFragment()
     }
 
     private lateinit var viewModel: MainViewModel

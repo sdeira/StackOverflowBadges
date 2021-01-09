@@ -16,7 +16,7 @@ object BadgesApiModule {
 
     @Singleton
     @Provides
-    fun redditApi(
+    fun badgesApi(
         okHttpClient: OkHttpClient
     ): BadgesApi {
         val retrofit = Retrofit.Builder()

@@ -10,7 +10,7 @@ import com.example.stackoverflowbadges.model.Badge
 @Dao
 interface BadgeDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertAll(posts: List<Badge>)
+    suspend fun insertAll(badges: List<Badge>)
 
     @Query("SELECT * FROM badges ORDER BY indexInResponse ASC")
     fun badges(): PagingSource<Int, Badge>

@@ -65,7 +65,7 @@ class BadgesRemoteMediator(
                 filter = "!9_bDE.caY"
             )
 
-//            val accessToken = redditDataBase.accessTokenDao().token()?.accessToken
+//            val accessToken = stackOverflowDataBase.accessTokenDao().token()?.accessToken
 //            val data = service.getBadges(accessToken, KEY, pageSize = when (loadType) {
 //                LoadType.REFRESH -> state.config.initialLoadSize
 //                else -> state.config.pageSize

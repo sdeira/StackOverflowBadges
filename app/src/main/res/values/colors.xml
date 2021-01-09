@@ -3,4 +3,9 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <color name="name_text_color">#1F75FE</color>
+    <color name="bronze">#D1A784</color>
+    <color name="silver">#B4B8BC</color>
+    <color name="gold">#FFCC00</color>
 </resources>
