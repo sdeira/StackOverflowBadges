@@ -4,7 +4,7 @@ A simple StackOverFlow client that shows the user badges from StackOverFlow.
 
 | Portrait | Landscape |
 |-|-|
-|<img src="https://github.com/sdeira/StackOverflowBadges/blob/main/captures/portrait.png" width="200">|<img src="https://github.com/sdeira/StackOverflowBadges/blob/main/captures/landscape.png" width="200">|
+|<img src="https://github.com/sdeira/StackOverflowBadges/blob/main/screenshots/portrait.png" width="200">|<img src="https://github.com/sdeira/StackOverflowBadges/blob/main/screenshots/landscape.png" width="200">|
 
 ## Architecture
 - MVVM
