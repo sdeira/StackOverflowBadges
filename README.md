@@ -17,6 +17,7 @@ A simple StackOverFlow client that shows the user badges from StackOverFlow.
 * [Retrofit][retrofit] for REST api communication
 * [Room][room] persistence library
 * [Paging][paging] for paging
+* [Detekt][detekt] for static code analysis
 
 [support-lib]: https://developer.android.com/topic/libraries/support-library/index.html
 [arch]: https://developer.android.com/arch
