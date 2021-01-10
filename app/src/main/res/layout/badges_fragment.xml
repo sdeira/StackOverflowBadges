@@ -20,7 +20,7 @@
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="16dp">
+            android:padding="@dimen/default_left_right_margin">
 
             <ToggleButton
                 android:id="@+id/toggle"
@@ -34,6 +34,7 @@
                 android:id="@+id/radio_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -42,8 +43,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/all"
                     android:checked="true"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="@dimen/default_left_right_small_margin"
+                    android:layout_marginEnd="@dimen/default_left_right_small_margin"
                     />
 
                 <RadioButton
@@ -51,8 +52,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/gold"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="@dimen/default_left_right_small_margin"
+                    android:layout_marginEnd="@dimen/default_left_right_small_margin"
                     />
 
                 <RadioButton
@@ -60,8 +61,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/silver"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="@dimen/default_left_right_small_margin"
+                    android:layout_marginEnd="@dimen/default_left_right_small_margin"
                     />
 
                 <RadioButton
@@ -69,8 +70,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/bronze"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="@dimen/default_left_right_small_margin"
+                    android:layout_marginEnd="@dimen/default_left_right_small_margin"
                     />
 
             </RadioGroup>
