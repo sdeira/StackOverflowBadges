@@ -26,9 +26,16 @@ A simple StackOverFlow client that shows the user badges from StackOverFlow.
 [room]: https://developer.android.com/topic/libraries/architecture/room
 [paging]: https://developer.android.com/topic/libraries/architecture/paging/v3-overview
 [glide]: https://github.com/bumptech/glide
+[detekt]: https://detekt.github.io/detekt/
 
 ## Getting Started
 
 ```shell
 $ git clone git@github.com:sdeira/StackOverflowBadges.git
+```
+
+To run detekt
+
+```shell
+$ ./gradlew detekt
 ```

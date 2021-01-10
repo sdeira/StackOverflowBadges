@@ -29,6 +29,9 @@ buildscript {
         mockitoVersion = "3.3.0"
         robolectricVersion = "4.4"
         coreTestingVersion = "1.1.1"
+
+        //Static Code Analysis
+        detektVersion = "1.14.2"
     }
     repositories {
         google()
@@ -44,6 +47,10 @@ buildscript {
     }
 }
 
+plugins {
+    id("io.gitlab.arturbosch.detekt").version("$detektVersion")
+}
+
 allprojects {
     repositories {
         google()
@@ -53,4 +60,25 @@ allprojects {
 
 task clean(type:Delete) {
     delete rootProject.buildDir
+}
+
+detekt {
+    toolVersion = "$detektVersion"
+    input = files("$projectDir")
+    config = files("config/detekt/detekt.yml")
+    buildUponDefaultConfig = true
+    reports {
+        xml {
+            enabled = true
+            destination = file("$project.projectDir/detekt-report.xml")
+        }
+        html {
+            enabled = true
+            destination = file("$project.projectDir/detekt-report.html")
+        }
+    }
+}
+
+dependencies {
+    detektPlugins "io.gitlab.arturbosch.detekt:detekt-formatting:1.14.2"
 }
