@@ -7,13 +7,17 @@ import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.stackoverflowbadges.model.Filters
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import org.junit.*
+import org.junit.After
+import org.junit.Before
+import org.junit.Rule
+import org.junit.Test
+import org.junit.Assert
 import org.junit.runner.RunWith
 import java.com.example.stackoverflowbadges.TestCoroutineRule
 
 @ExperimentalCoroutinesApi
 @RunWith(AndroidJUnit4::class)
-class RedditDataBaseTest {
+class StackOverFlowDataBaseTest {
 
     private lateinit var filterDao: FiltersDao
     private lateinit var db: StackOverflowDataBase
@@ -76,5 +80,4 @@ class RedditDataBaseTest {
             Assert.assertEquals(filter?.order, order)
         }
     }
-
 }

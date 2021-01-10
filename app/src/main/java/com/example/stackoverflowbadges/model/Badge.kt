@@ -18,7 +18,7 @@ data class Badge(
     @SerializedName("award_count")
     val awardCount: String,
     @SerializedName("num_comments")
-    val num_comments: Int,
+    val numComments: Int,
     @SerializedName("description")
     val description: String?
 ) {

@@ -22,7 +22,7 @@ import org.robolectric.annotation.Config
 @ExperimentalCoroutinesApi
 @Config(sdk = [Build.VERSION_CODES.P])
 @RunWith(RobolectricTestRunner::class)
-class PostsAdapterTest {
+class BadgesAdapterTest {
     lateinit var adapter: BadgesAdapter
 
     @get:Rule

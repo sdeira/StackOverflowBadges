@@ -17,8 +17,14 @@ class DeepLinkViewModel @ViewModelInject constructor(
 
     val uiState: MutableLiveData<UIState> = MutableLiveData()
 
-    suspend fun login(data: Uri?, clientId: String, clientSecret: String, redirectUrl: String,
-                      scope: String, loginSuccessfully: String) {
+    suspend fun login(
+        data: Uri?,
+        clientId: String,
+        clientSecret: String,
+        redirectUrl: String,
+        scope: String,
+        loginSuccessfully: String
+    ) {
         try {
             uiState.value = UIState.Loading(true)
             uiState.value = UIState.FullScreenError(false)
@@ -36,16 +42,14 @@ class DeepLinkViewModel @ViewModelInject constructor(
                 uiState.value = UIState.Loading(false)
                 uiState.value = UIState.SnackBar(loginSuccessfully)
                 uiState.value = UIState.Success
-
             }
-        }  catch (exception: IOException) {
+        } catch (exception: IOException) {
             uiState.value = UIState.Loading(false)
             uiState.value = UIState.FullScreenError(true)
         } catch (exception: HttpException) {
             uiState.value = UIState.Loading(false)
             uiState.value = UIState.FullScreenError(true)
         }
-
     }
 }
 

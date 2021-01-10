@@ -16,6 +16,9 @@ import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class SplashActivity : AppCompatActivity() {
+    companion object {
+        private const val DELAY = 3000L
+    }
     private val viewModel: SplashViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,11 +26,11 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.splash_activity)
 
         lifecycleScope.launch {
-            delay(3000)
+            delay(DELAY)
             viewModel.checkUserToken()
         }
-        viewModel.uiState.observe(this, Observer {uiState ->
-            when(uiState) {
+        viewModel.uiState.observe(this, Observer { uiState ->
+            when (uiState) {
                 is SplashUIState.Success -> {
                     val intent = Intent(this, MainActivity::class.java)
                     ContextCompat.startActivity(this, intent, null)

@@ -49,27 +49,12 @@ class BadgesRemoteMediator(
                 stackOverflowDataBase.filtersDao().insert(filters)
             }
 
-            val data = service.getBadgesFromUser(
-                "6891563",
-                pageSize = when (loadType) {
-                    LoadType.REFRESH -> state.config.initialLoadSize
-                    else -> state.config.pageSize
-                },
-                page = loadKey,
-                order = filters.order,
-                sort = "rank",
-                min = filters.min,
-                max = filters.max,
-                site = "stackoverflow",
-                key = KEY,
-                filter = "!9_bDE.caY"
-            )
-
-//            val accessToken = stackOverflowDataBase.accessTokenDao().token()?.accessToken
-//            val data = service.getBadges(accessToken, KEY, pageSize = when (loadType) {
-//                LoadType.REFRESH -> state.config.initialLoadSize
-//                else -> state.config.pageSize
-//            }, page = loadKey, order = "desc", sort = "rank", filters.min, filters.max, site = "stackoverflow", filter = "!9_bDE.caY")
+            val accessToken = stackOverflowDataBase.accessTokenDao().token(1)?.accessToken
+            val data = service.getBadges(accessToken, KEY, pageSize = when (loadType) {
+                LoadType.REFRESH -> state.config.initialLoadSize
+                else -> state.config.pageSize
+            }, page = loadKey, order = "desc", sort = "rank", min = filters.min, max = filters.max,
+                site = "stackoverflow", filter = "!9_bDE.caY")
 
             val items = data.items.map { it }
             stackOverflowDataBase.withTransaction {

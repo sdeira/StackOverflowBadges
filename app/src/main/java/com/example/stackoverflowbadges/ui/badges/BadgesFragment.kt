@@ -33,8 +33,11 @@ class BadgesFragment : Fragment() {
     @Inject
     lateinit var adapter: BadgesAdapter
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
         binding = BadgesFragmentBinding.inflate(inflater, container, false)
         initList()
         initFilters()
@@ -105,5 +108,4 @@ class BadgesFragment : Fragment() {
             }
         }
     }
-
 }

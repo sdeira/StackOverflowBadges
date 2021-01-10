@@ -33,7 +33,7 @@ class DeepLinkActivity : AppCompatActivity() {
             val data: Uri? = intent?.data
             login(data)
         }
-        viewModel.uiState.observe(this, Observer {uiState ->
+        viewModel.uiState.observe(this, Observer { uiState ->
             when (uiState) {
                 is UIState.Success -> {
                     val intent = Intent(this, MainActivity::class.java)

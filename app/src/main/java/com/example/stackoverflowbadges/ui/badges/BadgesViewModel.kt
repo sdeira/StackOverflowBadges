@@ -45,7 +45,6 @@ class BadgesViewModel @ViewModelInject constructor(
         } else {
             repository.setFilterOrder("desc")
         }
-
     }
 
     /**
