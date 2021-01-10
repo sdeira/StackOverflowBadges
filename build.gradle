@@ -20,6 +20,15 @@ buildscript {
 
         //Navigation
         navigationVersion = "2.3.1"
+
+        //Testing
+        jUnitVersion = "4.13"
+        extJunitVersion = "1.1.2"
+        expressoVersion = "3.3.0"
+        coroutinesTestVersion = "1.3.9"
+        mockitoVersion = "3.3.0"
+        robolectricVersion = "4.4"
+        coreTestingVersion = "1.1.1"
     }
     repositories {
         google()

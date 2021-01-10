@@ -27,7 +27,7 @@ class BadgesFragment : Fragment() {
             BadgesFragment()
     }
 
-    private var postsJob: Job? = null
+    private var badgesJob: Job? = null
     private lateinit var binding: BadgesFragmentBinding
     private val viewModel: BadgesViewModel by activityViewModels()
     @Inject
@@ -39,7 +39,7 @@ class BadgesFragment : Fragment() {
         initList()
         initFilters()
         initAdapter()
-        getPosts()
+        getBadges()
         return binding.root
     }
 
@@ -53,12 +53,12 @@ class BadgesFragment : Fragment() {
     }
 
     /**
-     * Get the posts from the view model and submit them to the adapter.
+     * Get the badges from the view model and submit them to the adapter.
      */
-    private fun getPosts() {
+    private fun getBadges() {
         // Make sure we cancel the previous job before creating a new one
-        postsJob?.cancel()
-        postsJob = viewLifecycleOwner.lifecycleScope.launch {
+        badgesJob?.cancel()
+        badgesJob = viewLifecycleOwner.lifecycleScope.launch {
             viewModel.getBadges().collectLatest {
                 adapter.submitData(it)
             }
